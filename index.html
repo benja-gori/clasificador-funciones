@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Clasificador de Funciones</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="encabezado">
+        <p>MATEMÁTICAS & PROGRAMACIÓN</p>
+        <h1>Clasificador de Funciones</h1>
+        <span>Unidad: Funciones Algebraicas</span>
+    </header>
+
+    <main class="contenedor">
+
+        <section class="presentacion">
+            <h2>¡Descubre tu función!</h2>
+            <p>
+                Genera dos números aleatorios y descubre
+                si la función es lineal o afín.
+            </p>
+        </section>
+
+        <!-- COEFICIENTES -->
+
+        <section class="panel">
+
+            <h2>Coeficientes de la función</h2>
+
+            <div class="coeficientes">
+
+                <div class="coeficiente">
+                    <label>Valor de b</label>
+                    <div id="valorB" class="numero">0</div>
+                </div>
+
+                <div class="coeficiente">
+                    <label>Valor de c</label>
+                    <div id="valorC" class="numero">0</div>
+                </div>
+
+            </div>
+
+            <div class="formula">
+                <p>Función generada:</p>
+                <h2 id="expresion">f(x) = bx + c</h2>
+            </div>
+
+            <button id="botonGenerar">
+                Generar / Cambiar valores
+            </button>
+
+        </section>
+
+        <!-- CLASIFICACION -->
+
+        <section class="clasificaciones">
+
+            <h2>Clasificación de la función</h2>
+
+            <div class="caja lineal" id="cajaLineal">
+
+                <h3>FUNCIÓN LINEAL</h3>
+
+                <p class="estado" id="estadoLineal">
+                    Esperando resultados...
+                </p>
+
+                <div id="propiedadesLineal">
+                    <p>f(x) = bx</p>
+                    <ul>
+                        <li>Pasa por el origen (0,0).</li>
+                        <li>Es una línea recta continua.</li>
+                        <li>Su pendiente está determinada por b.</li>
+                        <li>Si b es positivo, es creciente.</li>
+                        <li>Si b es negativo, es decreciente.</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="caja afin" id="cajaAfin">
+
+                <h3>FUNCIÓN AFÍN</h3>
+
+                <p class="estado" id="estadoAfin">
+                    Esperando resultados...
+                </p>
+
+                <div id="propiedadesAfin">
+                    <p>f(x) = bx + c</p>
+                    <ul>
+                        <li>No pasa por el origen.</li>
+                        <li>Es una línea recta continua.</li>
+                        <li>Corta el eje Y en (0,c).</li>
+                        <li>Su inclinación depende de b.</li>
+                        <li>Se traslada verticalmente c unidades.</li>
+                        <li>Si b es positivo, es creciente.</li>
+                        <li>Si b es negativo, es decreciente.</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- GEOGEBRA -->
+
+        <section class="panel geogebra">
+
+            <h2>Modelación en GeoGebra</h2>
+
+            <p>
+                Puedes representar gráficamente tu función
+                utilizando GeoGebra Clásico.
+            </p>
+
+            <a href="https://www.geogebra.org/classic"
+               target="_blank">
+                Abrir GeoGebra Clásico
+            </a>
+
+        </section>
+
+        <!-- SUBIR ARCHIVO -->
+
+        <section class="panel archivos">
+
+            <h2>Guardar archivo de GeoGebra</h2>
+
+            <p>
+                Selecciona el archivo .ggb que descargaste
+                desde GeoGebra.
+            </p>
+
+            <input
+                type="file"
+                id="archivoGGB"
+                accept=".ggb"
+            >
+
+            <p id="nombreArchivo">
+                Ningún archivo seleccionado.
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer class="pie">
+
+        <p>Clasificador de Funciones Algebraicas</p>
+        <p>Matemáticas & Programación · 2026</p>
+
+    </footer>
+
+    <script src="funciones.js"></script>
+
+</body>
+</html>
